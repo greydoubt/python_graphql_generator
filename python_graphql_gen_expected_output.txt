@@ -1,0 +1,43 @@
+Superheroes:
+Thor: Str 7, Spd 1, Int 7, Dur 3
+Captain America: Str 1, Spd 3, Int 8, Dur 10
+Doctor Strange: Str 3, Spd 10, Int 1, Dur 3
+Black Widow: Str 5, Spd 10, Int 10, Dur 2
+Vision: Str 3, Spd 3, Int 8, Dur 4
+Captain Marvel: Str 10, Spd 5, Int 3, Dur 6
+Spider-Man: Str 3, Spd 2, Int 4, Dur 6
+Vision: Str 8, Spd 4, Int 5, Dur 5
+Vision: Str 9, Spd 5, Int 3, Dur 9
+Doctor Strange: Str 10, Spd 8, Int 5, Dur 9
+
+Teams:
+Suicide Squad:
+Members: ['Black Widow', 'Captain Marvel', 'Vision']
+Enemies: ['Vision', 'Thor', 'Doctor Strange']
+Fantastic Four:
+Members: ['Vision', 'Captain America']
+Enemies: ['Vision', 'Captain Marvel', 'Captain America']
+Thunderbolts:
+Members: ['Vision', 'Vision']
+Enemies: ['Captain America', 'Vision']
+Thunderbolts:
+Members: ['Vision', 'Thor', 'Doctor Strange']
+Enemies: ['Doctor Strange', 'Captain America', 'Vision']
+Thunderbolts:
+Members: ['Spider-Man', 'Doctor Strange', 'Captain Marvel']
+Enemies: ['Doctor Strange', 'Black Widow']
+Defenders:
+Members: ['Spider-Man', 'Captain Marvel', 'Vision']
+Enemies: ['Vision', 'Captain America']
+Justice League:
+Members: ['Vision', 'Doctor Strange', 'Vision']
+Enemies: ['Black Widow', 'Captain America', 'Vision']
+Young Avengers:
+Members: ['Captain America', 'Doctor Strange', 'Vision']
+Enemies: ['Vision', 'Captain America', 'Vision']
+Thunderbolts:
+Members: ['Doctor Strange', 'Spider-Man', 'Doctor Strange']
+Enemies: ['Doctor Strange', 'Thor', 'Vision']
+Avengers:
+Members: ['Captain America', 'Captain Marvel', 'Vision']
+Enemies: ['Black Widow', 'Vision', 'Vision']
