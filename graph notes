@@ -1,0 +1,729 @@
+
+GraphQL statements for 20 superheroes:
+--------------------------------------
+{ name: "Spider-Man", strength: 7, intelligence: 5, agility: 10, durability: 4, speed: 8 }
+{ name: "Iron Man", strength: 8, intelligence: 9, agility: 5, durability: 8, speed: 7 }
+{ name: "Captain America", strength: 6, intelligence: 4, agility: 7, durability: 6, speed: 5 }
+{ name: "Thor", strength: 10, intelligence: 6, agility: 5, durability: 9, speed: 7 }
+{ name: "Hulk", strength: 10, intelligence: 3, agility: 4, durability: 10, speed: 5 }
+{ name: "Black Widow", strength: 4, intelligence: 7, agility: 9, durability: 4, speed: 7 }
+{ name: "Hawkeye", strength: 4, intelligence: 5, agility: 10, durability: 4, speed: 7 }
+{ name: "Black Panther", strength: 6, intelligence: 7, agility: 10, durability: 6, speed: 6 }
+{ name: "Doctor Strange", strength: 4, intelligence: 10, agility: 5, durability: 4, speed: 6 }
+{ name: "Wolverine", strength: 8, intelligence: 3, agility: 7, durability: 9, speed: 5 }
+{ name: "Deadpool", strength: 7, intelligence: 4, agility: 9, durability: 7, speed: 6 }
+{ name: "Daredevil", strength: 5, intelligence: 7, agility: 10, durability: 6, speed: 6 }
+{ name: "Jessica Jones", strength: 5, intelligence: 4, agility: 7, durability: 7, speed: 4 }
+{ name: "Luke Cage", strength: 8, intelligence: 4, agility: 5, durability: 10, speed: 3 }
+{ name: "Iron Fist", strength: 6, intelligence: 5, agility: 9, durability: 6, speed: 6 }
+{ name: "Punisher", strength: 9, intelligence: 3, agility: 5, durability: 7, speed: 5 }
+{ name: "Ant-Man", strength: 4, intelligence: 5, agility: 9, durability: 4, speed: 7 }
+{ name: "Vision", strength: 6, intelligence: 7, agility: 4, durability: 9, speed: 6 }
+{ name: "Scarlet Witch", strength: 4, intelligence: 9, agility: 5, durability: 4, speed: 6 }
+{ name: "Groot", strength: 10, intelligence: 3, agility: 2, durability: 10, speed: 2 }
+
+GraphQL statements for 10 team-ups:
+----------------------------------
+{ source: "Thor", target: "Iron Man", relationship_type: "teamed up with" }
+{ source: "Iron Fist", target: "Luke Cage", relationship_type: "teamed up with" }
+{ source: "Deadpool", target: "Spider-Man", relationship_type: "teamed up with" }
+{ source: "Captain America", target: "Black Panther", relationship_type: "teamed up with" }
+{ source: "Black Widow", target: "Hawkeye", relationship_type: "teamed up with" }
+{ source: "Doctor Strange", target: "Scarlet Witch", relationship_type: "teamed up with" }
+{ source: "Groot", target: "Rocket", relationship_type: "teamed up with" }
+{ source: "Jessica Jones", target: "Daredevil", relationship_type: "teamed up with" }
+{ source: "Ant-Man", target: "Wasp", relationship_type: "teamed up with" }
+{ source: "Punisher", target: "Ghost Rider", relationship_type: "teamed up with" }
+
+
+GraphQL statements for 10 battles:
+----------------------------------
+{ source: "Iron Man", target: "Captain America", relationship_type: "battled against" }
+{ source: "Thor", target: "Hulk", relationship_type: "battled against" }
+{ source: "Black Widow", target: "Black Panther", relationship_type: "battled against" }
+{ source: "Wolverine", target: "Deadpool", relationship_type: "battled against" }
+{ source: "Doctor Strange", target: "Dormammu", relationship_type: "battled against" }
+{ source: "Luke Cage", target: "Diamondback", relationship_type: "battled against" }
+{ source: "Spider-Man", target: "Green Goblin", relationship_type: "battled against" }
+{ source: "Scarlet Witch", target: "Ultron", relationship_type: "battled against" }
+{ source: "Iron Fist", target: "Steel Serpent", relationship_type: "battled against" }
+{ source: "Groot", target: "Thanos", relationship_type: "battled against" }
+
+
+Example GraphQL data for validation:
+----------------------------------
+{
+"superheroes": [
+{ "name": "Spider-Man", "strength": 7, "intelligence": 5, "agility": 10, "durability": 4, "speed": 8 },
+{ "name": "Iron Man", "strength": 8, "intelligence": 9, "agility": 5, "durability": 8, "speed": 7 },
+{ "name": "Captain America", "strength": 6, "intelligence": 4, "agility": 7, "durability": 6, "speed": 5 },
+{ "name": "Thor", "strength": 10, "intelligence": 6, "agility": 5, "durability": 9, "speed": 7 },
+{ "name": "Hulk", "strength": 10, "intelligence": 3, "agility": 4, "durability": 10, "speed": 5 },
+{ "name": "Black Widow", "strength": 4, "intelligence": 7, "agility": 9, "durability": 4, "speed": 7 },
+{ "name": "Hawkeye", "strength": 4, "intelligence": 5, "agility": 10, "durability": 4, "speed": 7 },
+{ "name": "Black Panther", "strength": 6, "intelligence": 7, "agility": 10, "durability": 6, "speed": 6 },
+{ "name": "Doctor Strange", "strength": 4, "intelligence": 10, "agility": 5, "durability": 4, "speed": 9 },
+{ "name": "Scarlet Witch", "strength": 5, "intelligence": 8, "agility": 6, "durability": 5, "speed": 6 },
+{ "name": "Ant-Man", "strength": 3, "intelligence": 7, "agility": 7, "durability": 3, "speed": 8 },
+{ "name": "Wasp", "strength": 3, "intelligence": 7, "agility": 9, "durability": 3, "speed": 8 },
+{ "name": "Daredevil", "strength": 4, "intelligence": 6, "agility": 9, "durability": 5, "speed": 7 },
+{ "name": "Jessica Jones", "strength": 8, "intelligence": 6, "agility": 5, "durability": 8, "speed": 4 },
+{ "name": "Luke Cage", "strength": 9, "intelligence": 5, "agility": 3, "durability": 10, "speed": 4 },
+{ "name": "Iron Fist", "strength": 6, "intelligence": 6, "agility": 8, "durability": 6, "speed": 7 },
+{ "name": "Punisher", "strength": 7, "intelligence": 5, "agility": 6, "durability": 7, "speed": 5 },
+{ "name": "Ghost Rider", "strength": 8, "intelligence": 4, "agility": 5, "durability": 9, "speed": 6 },
+{ "name": "Wolverine", "strength": 9, "intelligence": 4, "agility": 8, "durability": 9, "speed": 5 },
+{ "name": "Deadpool", "strength": 6, "intelligence": 5, "agility": 9, "durability": 6, "speed": 7 },
+{ "name": "Diamondback", "strength": 7, "intelligence": 4, "agility": 5, "durability": 6, "speed": 5 },
+{ "name": "Green Goblin", "strength": 5, "intelligence": 7, "agility": 7, "durability": 5, "speed": 6 },
+{ "name": "Dormammu", "strength": 10, "intelligence": 8, "agility": 3, "durability": 10, "speed": 3 },
+{ "name": "Steel Serpent", "strength": 6, "intelligence": 5, "agility": 8, "durability": 6, "speed": 7 },
+{ "name": "Thanos", "strength": 10, "intelligence": 10, "agility": 5, "durability": 10, "speed": 5 }
+
+],
+"relationships": [
+{ "source": "Iron Man", "target": "Captain America", "relationship_type": "battled against" },
+{ "source": "Thor", "target": "Hulk", "relationship_type": "battled against" },
+{ "source": "Black Widow", "target": "Black Panther", "relationship_type": "battled against" },
+{ "source": "Wolverine", "target": "Magneto", "relationship_type": "teamed up with" },
+{ "source": "Spider-Man", "target": "Daredevil", "relationship_type": "teamed up with" },
+{ "source": "Captain America", "target": "Falcon", "relationship_type": "teamed up with" },
+{ "source": "Doctor Strange", "target": "Scarlet Witch", "relationship_type": "teamed up with" },
+{ "source": "Iron Fist", "target": "Luke Cage", "relationship_type": "teamed up with" },
+{ "source": "Punisher", "target": "Ghost Rider", "relationship_type": "teamed up with" },
+{ "source": "Jessica Jones", "target": "Diamondback", "relationship_type": "teamed up with" },
+{ "source": "Thanos", "target": "Dormammu", "relationship_type": "teamed up with" },
+{ "source": "Green Goblin", "target": "Steel Serpent", "relationship_type": "teamed up with" }
+]
+}
+
+
+
+Example GraphQL data for validation
+
+example_data = {
+"data": {
+"superheroes": [
+{ "name": "Iron Man", "strength": 7, "intelligence": 10, "agility": 6, "durability": 7, "speed": 7 },
+{ "name": "Captain America", "strength": 6, "intelligence": 6, "agility": 5, "durability": 6, "speed": 3 },
+{ "name": "Thor", "strength": 10, "intelligence": 6, "agility": 7, "durability": 10, "speed": 7 },
+{ "name": "Hulk", "strength": 10, "intelligence": 4, "agility": 4, "durability": 10, "speed": 3 },
+{ "name": "Black Widow", "strength": 3, "intelligence": 8, "agility": 10, "durability": 3, "speed": 9 },
+{ "name": "Black Panther", "strength": 7, "intelligence": 7, "agility": 8, "durability": 6, "speed": 6 },
+{ "name": "Magneto", "strength": 6, "intelligence": 9, "agility": 5, "durability": 6, "speed": 5 },
+{ "name": "Spider-Man", "strength": 5, "intelligence": 7, "agility": 10, "durability": 5, "speed": 8 },
+{ "name": "Doctor Strange", "strength": 3, "intelligence": 10, "agility": 4, "durability": 3, "speed": 3 },
+{ "name": "Scarlet Witch", "strength": 5, "intelligence": 8, "agility": 6, "durability": 5, "speed": 6 },
+{ "name": "Ant-Man", "strength": 3, "intelligence": 7, "agility": 7, "durability": 3, "speed": 8 },
+{ "name": "Wasp", "strength": 3, "intelligence": 7, "agility": 9, "durability": 3, "speed": 8 },
+{ "name": "Daredevil", "strength": 4, "intelligence": 7, "agility": 9, "durability": 5, "speed": 5 },
+{ "name": "Luke Cage", "strength": 8, "intelligence": 5, "agility": 5, "durability": 8, "speed": 3 },
+{ "name": "Punisher", "strength": 6, "intelligence": 5, "agility": 5, "durability": 7, "speed": 4 },
+{ "name": "Jessica Jones", "strength": 6, "intelligence": 5, "agility": 4, "durability": 7, "speed": 3 },
+{ "name": "Diamondback", "strength": 6, "intelligence": 4, "agility": 4, "durability": 7, "speed": 3 },
+{ "name": "Thanos", "strength": 10, "intelligence": 9, "agility": 4, "durability": 10, "speed": 3 },
+{ "name": "Dormammu", "strength": 10, "intelligence": 10, "agility": 3, "durability": 10, "speed": 3 },
+{ "name": "Green Goblin", "strength": 5, "intelligence": 8, "agility": 6, "durability": 6, "speed": 5 },
+{ "name": "Steel Serpent", "strength": 5, "intelligence": 6, "agility": 7, "durability": 5, "speed": 6 }
+],
+"relationships": [
+{ "source": "Iron Man", "target": "Captain America", "relationship_type": "teamed up with" },
+{ "source": "Iron Man", "target": "Thor", "relationship_type": "battled against" },
+{ "source": "Iron Man", "target": "Hulk", "relationship_type": "teamed up with" },
+{ "source": "Iron Man", "target": "Black Widow", "relationship_type": "battled against" },
+{ "source": "Captain America", "target": "Black Panther", "relationship_type": "teamed up with" },
+{ "source": "Captain America", "target": "Iron Fist", "relationship_type": "battled against" },
+{ "source": "Captain America", "target": "Luke Cage", "relationship_type": "teamed up with" },
+{ "source": "Thor", "target": "Hulk", "relationship_type": "teamed up with" },
+{ "source": "Thor", "target": "Scarlet Witch", "relationship_type": "battled against" },
+{ "source": "Hulk", "target": "Black Widow", "relationship_type": "teamed up with" },
+{ "source": "Hulk", "target": "Ant-Man", "relationship_type": "battled against" },
+{ "source": "Black Widow", "target": "Black Panther", "relationship_type": "battled against" },
+{ "source": "Black Widow", "target": "Magneto", "relationship_type": "teamed up with" },
+{ "source": "Black Panther", "target": "Magneto", "relationship_type": "battled against" },
+{ "source": "Black Panther", "target": "Doctor Strange", "relationship_type": "teamed up with"},
+{ "source": "Iron Fist", "target": "Luke Cage", "relationship_type": "teamed up with" },
+{ "source": "Iron Fist", "target": "Daredevil", "relationship_type": "battled against" },
+{ "source": "Luke Cage", "target": "Jessica Jones", "relationship_type": "teamed up with" },
+{ "source": "Luke Cage", "target": "Diamondback", "relationship_type": "battled against" },
+{ "source": "Thanos", "target": "Dormammu", "relationship_type": "battled against" },
+{ "source": "Thanos", "target": "Green Goblin", "relationship_type": "teamed up with" },
+{ "source": "Dormammu", "target": "Doctor Strange", "relationship_type": "battled against" },
+{ "source": "Dormammu", "target": "Scarlet Witch", "relationship_type": "teamed up with" },
+{ "source": "Green Goblin", "target": "Spider-Man", "relationship_type": "battled against" },
+{ "source": "Green Goblin", "target": "Steel Serpent", "relationship_type": "teamed up with" }
+]
+}
+}
+
+
+Example GraphQL queries for validation
+
+query {
+superheroes {
+name
+strength
+intelligence
+agility
+durability
+speed
+}
+}
+
+query {
+relationships {
+source
+target
+relationship_type
+}
+}
+User
+continue
+ChatGPT
+Example GraphQL query result for superheroes
+
+{
+"data": {
+"superheroes": [
+{
+"name": "Iron Man",
+"strength": 7,
+"intelligence": 10,
+"agility": 5,
+"durability": 8,
+"speed": 7
+},
+{
+"name": "Captain America",
+"strength": 8,
+"intelligence": 7,
+"agility": 10,
+"durability": 9,
+"speed": 6
+},
+{
+"name": "Thor",
+"strength": 10,
+"intelligence": 6,
+"agility": 7,
+"durability": 10,
+"speed": 7
+},
+{
+"name": "Hulk",
+"strength": 10,
+"intelligence": 4,
+"agility": 4,
+"durability": 10,
+"speed": 5
+},
+{
+"name": "Spider-Man",
+"strength": 6,
+"intelligence": 9,
+"agility": 10,
+"durability": 5,
+"speed": 8
+},
+{
+"name": "Black Widow",
+"strength": 4,
+"intelligence": 8,
+"agility": 9,
+"durability": 6,
+"speed": 7
+},
+{
+"name": "Doctor Strange",
+"strength": 4,
+"intelligence": 10,
+"agility": 4,
+"durability": 7,
+"speed": 6
+},
+{
+"name": "Scarlet Witch",
+"strength": 6,
+"intelligence": 9,
+"agility": 6,
+"durability": 6,
+"speed": 6
+},
+{
+"name": "Ant-Man",
+"strength": 5,
+"intelligence": 7,
+"agility": 7,
+"durability": 5,
+"speed": 6
+},
+{
+"name": "Wasp",
+"strength": 3,
+"intelligence": 8,
+"agility": 9,
+"durability": 3,
+"speed": 7
+},
+{
+"name": "Luke Cage",
+"strength": 7,
+"intelligence": 5,
+"agility": 4,
+"durability": 9,
+"speed": 4
+},
+{
+"name": "Iron Fist",
+"strength": 5,
+"intelligence": 7,
+"agility": 8,
+"durability": 5,
+"speed": 7
+},
+{
+"name": "Jessica Jones",
+"strength": 6,
+"intelligence": 6,
+"agility": 6,
+"durability": 8,
+"speed": 5
+},
+{
+"name": "Green Goblin",
+"strength": 5,
+"intelligence": 8,
+"agility": 6,
+"durability": 6,
+"speed": 6
+},
+{
+"name": "Dormammu",
+"strength": 10,
+"intelligence": 8,
+"agility": 2,
+"durability": 10,
+"speed": 1
+},
+{
+"name": "Diamondback",
+User
+continue
+ChatGPT
+
+json
+
+    "strength": 5,
+    "intelligence": 5,
+    "agility": 7,
+    "durability": 5,
+    "speed": 6
+  },
+  {
+    "name": "Electro",
+    "strength": 4,
+    "intelligence": 5,
+    "agility": 7,
+    "durability": 4,
+    "speed": 7
+  },
+  {
+    "name": "Sandman",
+    "strength": 7,
+    "intelligence": 5,
+    "agility": 3,
+    "durability": 8,
+    "speed": 3
+  },
+  {
+    "name": "Kraven the Hunter",
+    "strength": 6,
+    "intelligence": 6,
+    "agility": 9,
+    "durability": 6,
+    "speed": 7
+  },
+  {
+    "name": "Mysterio",
+    "strength": 2,
+    "intelligence": 7,
+    "agility": 3,
+    "durability": 3,
+    "speed": 3
+  }
+]
+
+}
+}
+
+
+
+Example GraphQL query result for superhero relationships
+
+{
+"data": {
+"relationships": [
+{
+"hero1": "Iron Man",
+"hero2": "Captain America",
+"relationship": "Teammates"
+},
+{
+"hero1": "Iron Man",
+"hero2": "Spider-Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Captain America",
+"hero2": "Thor",
+"relationship": "Teammates"
+},
+{
+"hero1": "Thor",
+"hero2": "Hulk",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Spider-Man",
+"hero2": "Black Widow",
+"relationship": "Teammates"
+},
+{
+"hero1": "Black Widow",
+"hero2": "Doctor Strange",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Doctor Strange",
+"hero2": "Scarlet Witch",
+"relationship": "Teammates"
+},
+{
+"hero1": "Ant-Man",
+"hero2": "Wasp",
+"relationship": "Teammates"
+},
+{
+"hero1": "Luke Cage",
+"hero2": "Iron Fist",
+"relationship": "Teammates"
+},
+{
+"hero1": "Jessica Jones",
+"hero2": "Daredevil",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Green Goblin",
+"hero2": "Spider-Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Dormammu",
+"hero2": "Doctor Strange",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Diamondback",
+"hero2": "Luke Cage",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Electro",
+"hero2": "Spider-Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Sandman",
+"hero2": "Spider-Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Kraven the Hunter",
+"hero2": "Spider-Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Mysterio",
+"hero2": "Spider-Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Wolverine",
+"hero2": "Deadpool",
+"relationship": "Teammates"
+},
+{
+"hero1": "Black Panther",
+"hero2": "Storm",
+"relationship": "Teammates"
+},
+{
+"hero1": "Doctor Strange",
+"hero2": "Iron Man",
+"relationship": "Teammates"
+},
+{
+"hero1": "Groot",
+"hero2": "Rocket Raccoon",
+"relationship": "Teammates"
+},
+{
+"hero1": "Gamora",
+"hero2": "Star-Lord",
+"relationship": "Teammates"
+},
+{
+"hero1": "Hawkeye",
+"hero2": "Black Widow",
+"relationship": "Teammates"
+},
+{
+"hero1": "Falcon",
+"hero2": "Winter Soldier",
+"relationship": "Teammates"
+},
+{
+"hero1": "Captain Marvel",
+"hero2": "Iron Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Spider-Man",
+"hero2": "Doctor Octopus",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Captain America",
+"hero2": "Red Skull",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Thor",
+"hero2": "Loki",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Black Panther",
+"hero2": "Killmonger",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Scarlet Witch",
+"hero2": "Quicksilver",
+"relationship": "Teammates"
+},
+{
+"hero1": "Ant-Man",
+"hero2": "Yellowjacket",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Iron Man",
+"hero2": "Thanos",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Doctor Strange",
+"hero2": "Baron Mordo",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Luke Cage",
+"hero2": "Cottonmouth",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Daredevil",
+"hero2": "Bullseye",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Jessica Jones",
+"hero2": "Purple Man",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Iron Fist",
+"hero2": "Davos",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Spider-Man",
+"hero2": "Green Goblin",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Thor",
+"hero2": "Hela",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Wolverine",
+"hero2": "Mystique",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Black Widow",
+"hero2": "Taskmaster",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Doctor Strange",
+"hero2": "Dormammu",
+"relationship": "Battled Against"
+},
+{
+"hero1": "Deadpool",
+"hero2": "Cable",
+"relationship": "Teammates"
+},
+{
+"hero1": "Hulk",
+"hero2": "Abomination",
+"relationship": "Battled Against"
+}
+]
+}
+}
+
+
+
+`superheroes` object contains 20 randomly generated superheroes, each with a `name`, `power`, `speed`, `intelligence`, and `strength` attribute. The `relationships` object contains 10 randomly generated relationships, each with a `hero1`, `hero2`, and `relationship` attribute indicating which two superheroes were involved in the relationship and what kind of relationship it was (either "Teammates" or "Battled Against"). 
+
+
+# graphQL queries and data that feature Scarlet Witch:
+
+type Superhero {
+  id: ID!
+  name: String!
+  power: String!
+  abilities: [String!]!
+  friends: [Superhero!]!
+}
+
+type Query {
+  superhero(id: ID!): Superhero!
+  allSuperheroes: [Superhero!]!
+}
+
+type Mutation {
+  createSuperhero(name: String!, power: String!, abilities: [String!]!, friends: [ID!]!): Superhero!
+}
+
+# populate the data with information about superheroes
+
+{
+  "data": {
+    "allSuperheroes": [
+      {
+        "id": "1",
+        "name": "Iron Man",
+        "power": "Iron suit",
+        "abilities": ["Engineering", "Marksmanship"],
+        "friends": ["2", "3"]
+      },
+      {
+        "id": "2",
+        "name": "Captain America",
+        "power": "Superhuman strength",
+        "abilities": ["Leadership", "Tactical analysis"],
+        "friends": ["1", "4"]
+      },
+      {
+        "id": "3",
+        "name": "Scarlet Witch",
+        "power": "Reality warping",
+        "abilities": ["Telekinesis", "Energy manipulation"],
+        "friends": ["1", "4"]
+      },
+      {
+        "id": "4",
+        "name": "Vision",
+        "power": "Synthetic being",
+        "abilities": ["Density manipulation", "Solar energy projection"],
+        "friends": ["2", "3"]
+      }
+    ]
+  }
+}
+
+# retrieve information about Scarlet Witch using a GraphQL query:
+
+query {
+  superhero(id: 3) {
+    name
+    power
+    abilities
+    friends {
+      name
+      power
+    }
+  }
+}
+
+# response would be:
+
+graphql
+
+{
+  "data": {
+    "superhero": {
+      "name": "Scarlet Witch",
+      "power": "Reality warping",
+      "abilities": [
+        "Telekinesis",
+        "Energy manipulation"
+      ],
+      "friends": [
+        {
+          "name": "Iron Man",
+          "power": "Iron suit"
+        },
+        {
+          "name": "Vision",
+          "power": "Synthetic being"
+        }
+      ]
+    }
+  }
+}
+
+Mutation Example
+
+Lastly, let's say we want to add Scarlet Witch's friend to the GraphQL data using a mutation:
+
+
+
+mutation {
+  createSuperhero(
+    name: "Quicksilver",
+    power: "Super speed",
+    abilities: ["Enhanced agility", "Accelerated healing"],
+    friends: [3]
+  ) {
+    name
+    power
+    friends {
+      name
+    }
+  }
+}
+
+# response would be:
+
+graphql
+
+{
+  "data": {
+    "createSuperhero": {
+      "name": "Quicksilver",
+      "power": "Super speed",
+      "friends": [
+        {
+          "name": "Scarlet Witch"
+        }
+      ]
+    }
+  }
+}
