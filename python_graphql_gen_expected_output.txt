@@ -7,7 +7,7 @@ Vision: Str 3, Spd 3, Int 8, Dur 4
 Captain Marvel: Str 10, Spd 5, Int 3, Dur 6
 Spider-Man: Str 3, Spd 2, Int 4, Dur 6
 Vision: Str 8, Spd 4, Int 5, Dur 5
-Vision: Str 9, Spd 5, Int 3, Dur 9
+Scarlet Witch: Str 10, Spd 10, Int 10, Dur 10
 Doctor Strange: Str 10, Spd 8, Int 5, Dur 9
 
 Teams:
